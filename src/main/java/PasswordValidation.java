@@ -7,7 +7,7 @@ public class PasswordValidation {
         return password.length();
     }
 
-    public static boolean PumbersIncluded(String password) {
+    public static boolean NumbersIncluded(String password) {
         return password.matches(".*\\d.*");
     }
 
@@ -19,4 +19,10 @@ public class PasswordValidation {
         }
         return false;
     }
+
+    public static boolean PassCheck(String password) {
+        if(PasswordLength(password)>=8 && NumbersIncluded(password) && ContainUpperCase(password))
+        return true;
+        else return false;
+            }
     }
